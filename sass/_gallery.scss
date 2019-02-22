@@ -1,0 +1,42 @@
+.gallery {
+    background-color: $color-grey-light-1;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw); 
+    grid-template-areas: 
+        "one one two two two three four four"
+        "one one two two two three four four"
+        "five five two two two eight eight nine"
+        "five five six six seven eight eight nine"
+        "five five six six thirteen thirteen thirteen nine"
+        "eleven twelve twelve ten thirteen thirteen thirteen fourteen"
+        "eleven twelve twelve ten thirteen thirteen thirteen fourteen";
+    gap: 1.5rem;
+    padding: 1.5rem;
+
+    &__item {
+        &--1 { grid-area: one; }
+        &--2 { grid-area: two; }
+        &--3 { grid-area: three; }
+        &--4 { grid-area: four; }
+        &--5 { grid-area: five; }
+        &--6 { grid-area: six; }
+        &--7 { grid-area: seven; }
+        &--8 { grid-area: eight; }
+        &--9 { grid-area: nine; }
+        &--10 { grid-area: ten; }
+        &--11 { grid-area: eleven; }
+        &--12 { grid-area: twelve; }
+        &--13 { grid-area: thirteen; }
+        &--14 { grid-area: fourteen; }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
